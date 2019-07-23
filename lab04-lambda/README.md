@@ -63,7 +63,7 @@ aws cloudformation deploy --template-file output.yaml --stack-name learn-appsync
 1. Select *Queries* from the sub-navigation.
 
 
-Execute the following query to vote for the service `ec2`.
+Execute the following query to get the list of all services.
 
 ```
 query {
@@ -72,7 +72,6 @@ query {
       type
       name
     }
-    nextToken
   }
 }
 ```

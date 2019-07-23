@@ -90,8 +90,6 @@ mutation {
 Execute the following query to get the up-to-date results.
 
 
-As there are no votes stored in your DynamoDB table, the result of your query should look like this.
-
 ```
 query {
   getVotingResults {
@@ -100,6 +98,28 @@ query {
       upvotes
     }
     nextToken
+  }
+}
+```
+
+As there are no votes stored in your DynamoDB table, the result of your query should look like this.
+
+```
+{
+  "data": {
+    "getVotingResults": {
+      "items": [
+        {
+          "service": "fargate",
+          "upvotes": 1
+        },
+        {
+          "service": "ec2",
+          "upvotes": 1
+        }
+      ],
+      "nextToken": null
+    }
   }
 }
 ```
