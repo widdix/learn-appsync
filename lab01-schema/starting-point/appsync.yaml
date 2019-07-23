@@ -1,0 +1,44 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'learn-appsync'
+Resources:
+  GraphQLApiRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service: 'appsync.amazonaws.com'
+          Action: 'sts:AssumeRole'
+      Policies:
+      - PolicyName: ServiceRole
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - 'logs:CreateLogGroup'
+            - 'logs:CreateLogStream'
+            - 'logs:PutLogEvents'
+            Resource: '*'
+  GraphQLApi:
+    Type: 'AWS::AppSync::GraphQLApi'
+    Properties:
+      Name: !Ref 'AWS::StackName'
+      # TODO add authentication
+      LogConfig:
+        CloudWatchLogsRoleArn: !GetAtt 'GraphQLApiRole.Arn'
+        FieldLogLevel: ALL
+  ApiKey:
+    # TODO add Type and Properties
+  GraphQLSchema:
+    # TODO add Type and Properties
+Outputs:
+  GraphQLUrl:
+    Value: !GetAtt 'GraphQLApi.GraphQLUrl'
+  ApiId:
+    Value: !GetAtt 'GraphQLApi.ApiId'
+  ApiKey:
+    Value: !GetAtt 'ApiKey.ApiKey'

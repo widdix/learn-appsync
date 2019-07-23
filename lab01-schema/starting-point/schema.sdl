@@ -1,0 +1,10 @@
+type Query {
+  getVotingResults(nextToken: String): VotingResults
+  getServices(nextToken: String): Services
+}
+
+schema {
+  query: Query
+}
+
+# TODO add types

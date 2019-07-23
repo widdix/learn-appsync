@@ -1,0 +1,60 @@
+type Query {
+  getVotingResults(nextToken: String): VotingResults
+  getServices(nextToken: String): Services
+}
+
+type Mutation {
+  vote(service: ServiceType!): Boolean
+}
+
+type Subscription {
+  voted: Boolean
+  @aws_subscribe(mutations: ["vote"])
+}
+
+schema {
+  subscription: Subscription
+  query: Query
+  mutation: Mutation
+}
+
+enum ServiceType {
+  ec2
+  lambda
+  fargate
+  clb
+  nlb
+  alb
+  appsync
+  apigateway
+  eks
+  ecs
+  rds_aurora
+  rds_postgres
+  rds_mysql
+  rds_mariadb
+  dynamodb
+  s3
+  efs
+  ebs
+}
+
+type Services {
+  items: [Service]
+  nextToken: String
+}
+
+type Service {
+  type: ServiceType
+  name: String
+}
+
+type VotingResults {
+  items: [VotingResult]
+  nextToken: String
+}
+
+type VotingResult {
+  service: ServiceType!
+  upvotes: Int!
+}
