@@ -2,11 +2,11 @@
 
 ## Goal
 
-Sometimes forwarding read and write requests to DynamoDB is not sufficient. This lab is about using AWS Lambda to execute your own code.
+Sometimes forwarding read and write requests to DynamoDB is not sufficient. This lab is about using AWS Lambda to execute your code.
 
 ## Instructions
 
-Before you start, make sure your current working directory is set to `learn-appsync`.
+Before you start, make sure your current working directory is `learn-appsync`.
 
 Next, copy all files from `lab04-lambda/starting-point/`  to your working directory.
 
@@ -24,7 +24,7 @@ Add a few additional services to the `items` property of the return value.
 * `elasticache`
 * `kms`
 
-Next, you need to extend the CloudFormation template `appsync.yaml` to create a Lambda function. Use the Serverless Application Model (SAM) and fill in the needed properties for the resource `ServicesFunction`.
+Next, you need to extend the CloudFormation template `appsync.yaml` to create a Lambda function. Use the Serverless Application Model (SAM) and fill in the required properties for the resource `ServicesFunction`.
 
 * Use the Node.js 8.10 runtime.
 * Reference the code at `./index.js` the `aws cloudformation package` command will upload the JavaScript file automatically.
@@ -59,7 +59,7 @@ aws cloudformation deploy --template-file output.yaml --stack-name learn-appsync
 1. Open the AWS Management Console.
 1. Switch to the AppSync service.
 1. Select your API.
-1. Select *Queries* from the sub navigation.
+1. Select *Queries* from the sub-navigation.
 
 
 Execute the following query to vote for the service `ec2`.
@@ -78,7 +78,7 @@ query {
 
 The query should return a list of AWS services.
 
-That's it. You are ready to build your own application with AppSync.
+That's it. You are ready to build your application with AppSync.
 
 ## Help
 

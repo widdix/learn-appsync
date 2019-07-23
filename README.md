@@ -8,12 +8,12 @@ Are you looking for an instructor-led workshop based on these labs? Say [hello@w
 
 ## Labs
 
-* [Lab 01: Create GraphQL API and schema](lab01-schema/)
+* [Lab 01: Creating a GraphQL API and a schema](lab01-schema/)
 * [Lab 02: Reading from DynamoDB](lab02-dynamodb-read/)
 * [Lab 03: Writing to DynamoDB](lab03-dynamodb-write/)
 * [Lab 04: Invoking a Lambda function](lab04-lambda/)
 
-## Setup your personal lab environment
+## Setup your lab environment
 
 Clone this repository on your local machine.
 
@@ -35,8 +35,9 @@ Replace `<NICKNAME>` with your nickname (e.g. `andreas`).
 
 ```
 aws s3 rb --force s3://learn-appsync-<NICKNAME>
+aws cloudformation delete-stack --stack-name learn-appsync-<NICKNAME>
 ```
 
 ## More Labs
 
-See [widdix/learn-codepipeline](https://github.com/widdix/learn-codepipeline) for labs to learn AWS CodePipeline.
+We offer AWS workshops tailored to your needs. See [widdix/learn-*](https://github.com/widdix?utf8=✓&q=learn-&type) for more labs.

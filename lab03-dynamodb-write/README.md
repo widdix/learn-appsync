@@ -2,11 +2,11 @@
 
 ## Goal
 
-You will learn how to configure AppSync to forward write requests - so called mutations - to DynamoDB directly. You will create a data source, a resolver and request/response templates to do so.
+You will learn how to configure AppSync to forward write requests - so-called mutations - to DynamoDB directly. You will create a data source, a resolver, and request/response templates to do so.
 
 ## Instructions
 
-Before you start, make sure your current working directory is set to `learn-appsync`.
+Before you start, make sure your current working directory is  `learn-appsync`.
 
 Next, copy all files from `lab03-dynamodb-write/starting-point/`  to your working directory.
 
@@ -17,7 +17,7 @@ cp lab03-dynamodb-write/starting-point/* .
 
 ### Add a mutation to your schema
 
-So far your GraphQL schema specifies only queries. A query is reading data, it is not allowed to modify any data. To allow clients to vote for their favorite AWS service, you need to add a write request to your API. In GraphQL a write request is called *mutation*.
+So far, your GraphQL schema specifies only queries. A query is reading data; it is not allowed to modify any data. To enable clients to vote for their favorite AWS service, you need to add a write request to your API. In GraphQL a write request is called *mutation*.
 
 We have already extended the schema defined in `schema.sdl`.
 
@@ -68,7 +68,7 @@ aws cloudformation deploy --template-file output.yaml --stack-name learn-appsync
 1. Open the AWS Management Console.
 1. Switch to the AppSync service.
 1. Select your API.
-1. Select *Queries* from the sub navigation.
+1. Select *Queries* from the sub-navigation.
 
 
 Execute the following query to vote for the service `ec2`.
@@ -90,7 +90,7 @@ mutation {
 Execute the following query to get the up-to-date results.
 
 
-As there are no votes stored in your DynamoDB table the result of your query should look like this.
+As there are no votes stored in your DynamoDB table, the result of your query should look like this.
 
 ```
 query {

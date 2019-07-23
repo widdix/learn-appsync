@@ -1,4 +1,4 @@
-# Lab 01: Create GraphQL API and schema
+# Lab 01: Creating a GraphQL API and a schema
 
 ## Goal
 
@@ -6,7 +6,7 @@ The first lab is about creating a GraphQL API with AWS AppSync as well as to def
 
 ## Instructions
 
-Before you start, make sure your current working directory is set to `learn-appsync`.
+Before you start, make sure your current working directory is  `learn-appsync`.
 
 ### Create GraphQL API with CloudFormation
 
@@ -20,7 +20,7 @@ cp lab01-schema/starting-point/appsync.yaml .
 Extend the CloudFormation template `appsync.yaml` as described next.
 
 1. Configure the resource `GraphQLApi` to use an API key for authentication.
-1. Create the API key by specifying the `ApiKey` resource. Use `1577750400` (December 31, 2019 12:00:00 AM) as expiration date for the key.
+1. Create the API key by specifying the `ApiKey` resource. Use `1577750400` (December 31, 2019 12:00:00 AM) as the expiration date for the key.
 1. Configure the `GraphQLSchema` resource to define the GraphQL schema for your API. Load the schema definition from S3. You will use the `aws cloudformation package` command to deploy the CloudFormation template. Therefore, you can use a local path when referencing the `schema.sdl` file which you will create next.
 
 
@@ -36,9 +36,9 @@ cp lab01-schema/starting-point/schema.sdl .
 The API offers two queries:
 
 * `getVotingResults` to fetch voting results
-* `getServices` to fetch the available services to vote for
+* `getServices` to list the available services to vote for
 
-Both queries are already defined within the `schema.sdl`.
+The `schema.sdl` contains both queries already.
 
 ```
 type Query {
@@ -47,7 +47,7 @@ type Query {
 }
 ```
 
-It is up to you, to define the types `VotingResults` and `Services` within the schema.
+It is up to you to define the types `VotingResults` and `Services` within the schema.
 
 * `VotingResults`
 ** List of `VotingResult` per service
