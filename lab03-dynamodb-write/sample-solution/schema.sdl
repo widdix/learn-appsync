@@ -7,13 +7,7 @@ type Mutation {
   vote(service: ServiceType!): Boolean
 }
 
-type Subscription {
-  voted: Boolean
-  @aws_subscribe(mutations: ["vote"])
-}
-
 schema {
-  subscription: Subscription
   query: Query
   mutation: Mutation
 }
