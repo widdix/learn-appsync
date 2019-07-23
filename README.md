@@ -15,11 +15,7 @@ Are you looking for an instructor-led workshop based on these labs? Say [hello@w
 
 ## Setup your lab environment
 
-Clone this repository on your local machine.
-
-```
-git clone https://github.com/widdix/learn-appsync.git
-```
+Clone or [download](https://github.com/widdix/learn-appsync/archive/master.zip) this repository on your local machine.
 
 Create an S3 bucket storing deployment artifacts. Replace `<NICKNAME>` with your nickname (e.g. `andreas`).
 

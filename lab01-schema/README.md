@@ -50,17 +50,17 @@ type Query {
 It is up to you to define the types `VotingResults` and `Services` within the schema.
 
 * `VotingResults`
-** List of `VotingResult` per service
-** String `nextToken` needed to page through multi-page results
+    * List of `VotingResult` per service
+    * String `nextToken` needed to page through multi-page results
 * `VotingResult`
-** Enumerated type `service` an internal id for an AWS service
-** Integer `upvotes` the number of votes for the service
+    * Enumerated type `service` an internal id for an AWS service
+    * Integer `upvotes` the number of votes for the service
 * `Services`
-** List of `Service`
-** String `nextToken` needed to page through multi-page results
+    * List of `Service`
+    * String `nextToken` needed to page through multi-page results
 * `Service`
-** Enumerated type `type` an internal id for the AWS service
-** String `name` a display name for the AWS service
+    * Enumerated type `type` an internal id for the AWS service
+    * String `name` a display name for the AWS service
 
 Additional, add an enumerated type for the AWS services with the following types:
 
