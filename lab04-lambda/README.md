@@ -12,8 +12,9 @@ Next, copy all files from `lab04-lambda/starting-point/`  to your working direct
 
 ```
 # MacOS / Linux
-cp lab04-lambda/starting-point/starting-point/* .
+cp lab04-lambda/starting-point/* .
 ```
+
 ### Create a Lambda function
 
 To provide a list of all AWS services, you will implement a simple Lambda function. Open the file `index.js` which includes source code written in Node.js.
