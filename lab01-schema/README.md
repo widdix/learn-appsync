@@ -21,8 +21,7 @@ Extend the CloudFormation template `appsync.yaml` as described next.
 
 1. Configure the resource `GraphQLApi` to use an API key for authentication.
 1. Create the API key by specifying the `ApiKey` resource. Use `1577750400` (December 31, 2019 12:00:00 AM) as the expiration date for the key.
-1. Configure the `GraphQLSchema` resource to define the GraphQL schema for your API. Load the schema definition from S3. You will use the `aws cloudformation package` command to deploy the CloudFormation template. Therefore, you can use a local path when referencing the `schema.sdl` file which you will create next.
-
+1. Configure the `GraphQLSchema` resource to define the GraphQL schema for your API. You can usse the `DefinitionS3Location` property with a relative path on your machine. the `aws cloudformation package` command that you run later will convert relative paths to S3 URLs by uploading the files to S3.
 
 ### Define GraphQL API Schema
 
