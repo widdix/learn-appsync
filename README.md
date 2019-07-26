@@ -36,4 +36,4 @@ aws cloudformation delete-stack --stack-name learn-appsync-<NICKNAME>
 
 ## More Labs
 
-We offer AWS workshops tailored to your needs. See [widdix/learn-*](https://github.com/widdix?utf8=✓&q=learn-&type) for more labs.
+We offer AWS workshops tailored to your needs. See [widdix/learn-*](https://github.com/widdix?q=learn-) for more labs.
